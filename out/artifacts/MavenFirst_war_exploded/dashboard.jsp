@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<%@include file="lnc/head.jsp" %>
-<body>
-
-<!-- Start Content -->
-<div class="container-fluid">
-
-    <%@include file="lnc/header.jsp" %>
-
-    <div id="wrapper">
-        <%@include file="lnc/left.jsp" %>
-        <div id="content">
-            <div class="separator"></div>
-
-            <!-- dashbord small box start content -->
+<div id="dashboard">
 
             <div class="innerLR">
                 <div class="row-fluid">
@@ -40,7 +26,7 @@
                                 </a>
                             </div>
                             <div class="span3">
-                                <a href="calendar.jsp" class="widget-stats small-box">
+                                <a href="calendar_1.jsp" class="widget-stats small-box">
                                     <span class="glyphicons notes"><i></i></span>
                                     <span class="txt"><strong>12</strong>Schedules</span>
                                     <div class="clearfix"></div>
@@ -250,14 +236,7 @@
                     </div>
                 </div>
             </div>
-            <!-- End Content -->
-        </div>
-        <!-- End Wrapper -->
-    </div>
-    <!-- Sticky Footer -->
-</div>
 
-              <!-- Script for to do list  -->
 <script>
     (function () {
 
@@ -289,6 +268,4 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
-<%@include file="lnc/bottomjs.jsp" %>
-</body>
-</html>
+</div>

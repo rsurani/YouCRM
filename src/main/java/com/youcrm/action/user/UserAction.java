@@ -144,10 +144,10 @@ public class UserAction extends ActionSupport{
 
         System.out.println("Inside AddUser");
 
-        if(userService.insertUser(userRole,userName,userPassword,userDesignation,userContact,userEmail)==true){
+        if(userService.isUserInserted(userRole,userName,userPassword,userDesignation,userContact,userEmail)==true){
 
             System.out.println("Success");
-            return "success";
+            return SUCCESS;
         }
         else {
             System.out.println("Error");
@@ -173,6 +173,32 @@ public class UserAction extends ActionSupport{
     {
         System.out.println("DesigntionList");
         designationList=userService.getDesignationListService();
+
+        return "success";
+    }
+
+    public String deleteUser(){
+        System.out.println("UserId"+userId);
+        userService.isUserDeleted(userId);
+        return "success";
+    }
+
+    public String updateFetchUser(){
+        System.out.println("UserId: "+userId);
+        result=userService.getUserRecord(userId);
+        return "success";
+    }
+
+    public String updateUser(){
+
+        System.out.println("UpdateUser");
+
+        if(userService.isUserUpdated(userId,userRole,userName,userPassword,userDesignation,userContact,userEmail)==true){
+
+            //result=userService.getUserListService();
+            System.out.println("Updated");
+            return "success";
+        }
 
         return "success";
     }

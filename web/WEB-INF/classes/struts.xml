@@ -7,14 +7,23 @@
 
         <package name="login"  extends="json-default">
 
+
                 <action name="login" class="com.youcrm.action.user.UserAction" method="UserLoginValidation">
                         <result name="success" type="json"></result>
                       <!--  <result name="error">welcome.jsp</result>-->
                 </action>
 
-                <action name="addUser" class="com.youcrm.action.user.UserAction" method="addUser">
+                <action name="addUsers" class="com.youcrm.action.user.UserAction" method="addUser">
+
+
+
                         <result name="success" type="json"></result>
-                        <!--  <result name="error">welcome.jsp</result>-->
+
+                        <result name="error"  type="json"></result>
+                        <result name="input"  type="json"></result>
+
+
+
                 </action>
 
                 <action name="UserList" class="com.youcrm.action.user.UserAction" method="userDetailList">
@@ -41,6 +50,35 @@
                         <result name="error"  type="json"></result>
 
                 </action>
+
+
+                <action name="deleteUser" class="com.youcrm.action.user.UserAction" method="deleteUser">
+
+                        <result name="success"  type="json"></result>
+
+                        <result name="error"  type="json"></result>
+
+                </action>
+
+
+
+                <action name="updateUser" class="com.youcrm.action.user.UserAction" method="updateFetchUser">
+
+                        <result name="success"  type="json"></result>
+
+                        <result name="error"  type="json"></result>
+
+                </action>
+
+
+                <action name="update" class="com.youcrm.action.user.UserAction" method="updateUser">
+
+                        <result name="success"  type="json"></result>
+
+                        <result name="error"  type="json"></result>
+
+                </action>
+
         </package>
 
 </struts>

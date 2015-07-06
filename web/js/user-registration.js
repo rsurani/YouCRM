@@ -4,30 +4,40 @@
 
 var UserEntry= {
 
-
     init: function ()
     {
 
-        alert("init");
+
         global.bindClickEvent({selector:'#addUser'},UserEntry.add)
         global.bindClickEvent({selector:'#userDetail'},UserEntry.getDetail)
         // global.bindClickEvent({selector:'#delete'},global.delete)
     },
 
-    add:function () {
 
-        global.executePOSTRequest({
-            url: 'addUser',
-            params: $("#userRegistration").serialize(),
-            callback: UserEntry.initCallback
-        })
-    },
+
+
+        add:function () {
+
+
+          /* global.executePOSTRequest({
+                url: 'addUser',
+                params: $("#userRegistration").serialize(),
+                callback: UserEntry.initCallback
+            })*/
+
+
+            formManager.initForm({
+                url: 'addUsers',
+                container:$("#userRegistration"),
+                callback: UserEntry.initCallback
+            //  self: reportManager,
+            //params: {reportId: context.entityId},
+            })
+        },
 
 
     getDetail:function(backContext)
     {
-
-        alert("getDetail");
 
         $('#UserTable').DataTable(
             {
@@ -45,51 +55,15 @@ var UserEntry= {
                 ]
             });
 
-
-
-        /*
-         $("#UserTable").find("tr:gt(0)").remove();
-
-         var userDetailTable = $("#UserTable");
-         var i=0;
-         $.each(backContext.json.userList, function(key,value)
-         {
-
-         var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
-
-
-         rowNew.children().eq(0).text(value["userId"]);
-
-         rowNew.children().eq(1).text(value["userRole"]);
-
-         rowNew.children().eq(2).text(value["userName"]);
-
-         rowNew.children().eq(3).text(value["userDesignation"]);
-
-         rowNew.children().eq(4).text(value["userContact"]);
-
-         rowNew.children().eq(5).text(value["userEmail"]);
-
-         // rowNew.children().eq(6).append('<a href="#"><span class="glyphicon glyphicon-pencil"></span></a> &nbsp; <a href="#" class="rem"><span class="glyphicon glyphicon-remove"></span></a>');
-         //rowNew.children().eq(6).append(' <a href="product_edit.html?lang=en" class="btn-action glyphicons pencil btn-success"><i></i></a> <a href="#" data-val=value.userID id="delete"  class="btn-action glyphicons remove_2 btn-danger"><i></i></a>');
-
-         rowNew.children().eq(6).append('<button class="delete" data-value= "'+value.userId+'" >Delete</button>');
-
-         rowNew.appendTo(userDetailTable)
-
-         });
-
-
-
-         $("#UserInfoDateWise").dataTable();
-
-         global.bindClickEvent({selector:'.delete'},global.delete)*/
+        global.bindClickEvent({selector:'.delete'},UserEntry.delete)
+        global.bindClickEvent({selector:'.update'},UserEntry.updateFetch)
+        global.bindClickEvent({selector:'#updateUser'},UserEntry.update)
     } ,
 
 
     getDesignationDropDown:function(callContext)
     {
-        //  alert("Inside Json")
+
         $.each(callContext.json.designationList, function(key,value)
         {
             $('#designation').append($('<option/>').attr("value", value["userDesignation"]).text(value["designation"]));
@@ -100,7 +74,7 @@ var UserEntry= {
 
     fetchRecord: function () {
 
-        alert("SelectBox  Fetch")
+
         global.executePOSTRequest({
             url: 'DesignationList',
             callback: UserEntry.getDesignationDropDown
@@ -111,21 +85,111 @@ var UserEntry= {
 
     fetchUserRecord: function () {
 
-        alert("User Fetch");
+
         global.executePOSTRequest({
             url: 'UserList',
             // params: $("#userRegistration").serialize(),
             callback: UserEntry.getDetail
+
         })
 
     },
 
     initCallback: function (callbackContext) {
 
+        alert("addd")
         $('#userRegistration').find('input:not(#addUser)').val('');
-        UserEntry.fetchUserRecord();
+        location.href="user_registration.jsp";
+    },
+
+    delete: function(){
+
+        //  console.log($('.btn-action').data('value'));
+        // alert("Value"+(this.id).data('value'));
+
+        var userId=this.id;
+       // alert(userId)
+
+        global.executePOSTRequest({
+            url: 'deleteUser',
+            params: {userId:this.id},
+            callback: UserEntry.deleteCallback
+        })
+
+    },
+
+    deleteCallback: function (deleteContextCallback) {
+        location.href="user_registration.jsp";
+    },
+
+    updateFetch: function(){
+
+        global.executePOSTRequest({
+            url: 'updateUser',
+            params: {userId:this.id},
+            callback: UserEntry.updateFetchCallback
+        })
+
+    },
+
+    updateFetchCallback: function(callContext) {
+        //alert(callContext.json.result)
+
+
+        var value=callContext.json.result;
+
+        $('#userId').val(value.userId);
+        $('#loginId').val(value.userName);
+        $('#phone').val(value.userContact);
+        $('#email').val(value.userEmail);
+        //alert(value.userDesignation)
+        $('#designation').val(value.userDesignation).attr('selected', true);
+
+
+        $('#updateUser').css({"display":"block"});
+        $('#addUser').css({"display":"none"});
+        $('#userIdControl').css({"display":"block"});
+
+
+    },
+
+    update:function(){
+
+        $('#userId').removeAttr('disabled',false);
+
+/*
+        global.executePOSTRequest({
+            url: 'update',
+            params: $('#userRegistration').serialize(),
+            callback: UserEntry.updateCallback
+        })
+*/
+
+
+        formManager.initForm({
+            url: 'update',
+            container:$("#userRegistration"),
+            callback: UserEntry.updateCallback
+            //  self: reportManager,
+            //params: {reportId: context.entityId},
+        })
+
+
+    },
+
+    updateCallback:function(){
+
+        $('#userRegistration').find('input:not(#addUser)').val('');
+
+        $('#updateUser').css({"display":"none"});
+        $('#addUser').css({"display":"block"});
+        $('#userIdControl').css({"display":"none"});
+        location.href="user_registration.jsp";
+       // UserEntry.getDetail;
+
     }
 }
+
 
 
 

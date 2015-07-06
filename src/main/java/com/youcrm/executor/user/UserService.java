@@ -2,8 +2,7 @@ package com.youcrm.executor.user;
 
 import com.youcrm.action.user.UserAction;
 import com.youcrm.dao.ConnectionDB;
-
-
+import org.eclipse.jdt.internal.core.SourceType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -43,10 +42,11 @@ public class UserService {
             e.printStackTrace();
         }
 
+
         return false;
     }
 
-    public boolean insertUser(int userRole, String userName, String userPassword, int userDesignation, int userContact, String userEmail) {
+    public boolean isUserInserted(int userRole, String userName, String userPassword, int userDesignation, int userContact, String userEmail) {
 
         System.out.println("Inside Insert User");
 
@@ -55,7 +55,7 @@ public class UserService {
             String query = "INSERT INTO youcrm.user_master(user_role_id,user_login_id,user_password,designation_id,contact_number,email_id) VALUES ('" + userRole + "','" + userName + "','" + userPassword + "','" + userDesignation + "','" + userContact + "','" + userEmail + "')";
             System.out.println("Query: " + query);
 
-            preparedStatement = con.connection.prepareStatement("INSERT INTO youcrm.user_master(user_role_id,user_login_id,user_password,designation_id,contact_number,email_id) VALUES (?,?,?,?,?,?)");
+            preparedStatement = con.connection.prepareStatement("INSERT INTO youcrm.user_master(user_role_id,user_login_id,user_password,designation_id,contact_number,email_id,action) VALUES (?,?,?,?,?,?,true)");
             preparedStatement.setInt(1, userRole);
             preparedStatement.setString(2, userName);
             preparedStatement.setString(3, userPassword);
@@ -77,19 +77,21 @@ public class UserService {
     public List<List<String>> getUserListService()
     {
 
+       // int i=0;
+
         List<List<String>> result = new ArrayList<List<String>>();
 
         try
         {
 
-            preparedStatement = con.connection.prepareStatement("SELECT * FROM youcrm.user_master");
+            preparedStatement = con.connection.prepareStatement("SELECT * FROM youcrm.user_master WHERE action = true");
 
             resultSet = preparedStatement.executeQuery();
 
             List<String> row;
 
             while (resultSet.next()) {
-
+                //i++;
                 row = new ArrayList<String>();
 
                 int userId = resultSet.getInt("user_id");
@@ -100,7 +102,8 @@ public class UserService {
                 row.add(String.valueOf(resultSet.getInt("designation_id")));
                 row.add(String.valueOf(resultSet.getInt("contact_number")));
                 row.add(resultSet.getString("email_id"));
-                row.add("<i class='fa fa-pencil' data-value='"+userId+"'></i>&emsp;<i class='fa fa-trash-o' data-value='"+userId+"'></i>");
+               // row.add("<i class='fa fa-pencil' data-value='"+userId+"'></i>&emsp;<i class='fa fa-trash-o' data-value='"+userId+"'></i>");
+                row.add("<a href='#' data-value='"+ userId +"' id='"+ userId +"' class='update btn-action glyphicons pencil btn-success'><i></i></a> &nbsp; <a href='#' id='"+ userId +"' data-value='"+ userId +"' class=' delete btn-action glyphicons remove_2 btn-danger'><i></i></a>");
 
                 result.add(row);
 
@@ -157,6 +160,95 @@ public class UserService {
         }
 
         return designationList;
+
+    }
+
+    public boolean isUserDeleted(int userID){
+
+        System.out.println(userID);
+
+        try{
+
+            preparedStatement=con.connection.prepareStatement("UPDATE youcrm.user_master SET action=false WHERE user_id=?");
+            preparedStatement.setInt(1,userID);
+            preparedStatement.executeUpdate();
+
+
+
+            return true;
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public boolean isUserUpdated(int userID,int userRole, String userName, String userPassword, int userDesignation, int userContact, String userEmail){
+
+        try{
+
+            System.out.println("Update UserId:"+userID);
+            System.out.println("UserName" + userName);
+            System.out.println("UserRole"+userRole);
+            System.out.println("UserPassword"+userPassword);
+            System.out.println("UserDesignation: "+userDesignation);
+            System.out.println("Contact: " + userContact);
+            System.out.println("Email: "+ userEmail);
+
+            preparedStatement=con.connection.prepareStatement("UPDATE youcrm.user_master SET user_role_id=? ,user_login_id=? ,user_password=? ,designation_id=? ,contact_number=? ,email_id=?  WHERE user_id=?");
+            preparedStatement.setInt(1, userRole);
+            preparedStatement.setString(2, userName);
+            preparedStatement.setString(3, userPassword);
+            preparedStatement.setInt(4, userDesignation);
+            preparedStatement.setInt(5, userContact);
+            preparedStatement.setString(6, userEmail);
+            preparedStatement.setInt(7,userID);
+
+            preparedStatement.executeUpdate();
+
+            return true;
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+        return false;
+    }
+
+    public UserAction getUserRecord(int id)
+    {
+        UserAction userAction = new UserAction();
+     //   ArrayList<UserAction> userRecord = new ArrayList<UserAction>();
+        System.out.println("1");
+        try {
+
+
+            preparedStatement = con.connection.prepareStatement("SELECT * FROM youcrm.user_master WHERE user_id=?");
+
+            preparedStatement.setInt(1,id);
+
+            resultSet = preparedStatement.executeQuery();
+
+
+            while (resultSet.next()) {
+
+                userAction.setUserId(resultSet.getInt("user_id"));
+                userAction.setUserName(resultSet.getString("user_login_id"));
+                userAction.setUserDesignation(resultSet.getInt("designation_id"));
+                userAction.setUserContact(resultSet.getInt("contact_number"));
+                userAction.setUserEmail(resultSet.getString("email_id"));
+                userAction.setUserRole(resultSet.getInt("user_role_id"));
+
+               // userRecord.add(userAction);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("2");
+        return userAction;
 
     }
 

@@ -13,7 +13,7 @@
 <script src="js/select2.js"></script>
 <script src="js/bootstrap-select.js"></script>
 <%--<script src="js/load.js"></script>--%>
-
+<script src="js/formManager.js"></script>
 <script src="js/global.js"></script>
 <script src="js/user-registration.js"></script>
 
