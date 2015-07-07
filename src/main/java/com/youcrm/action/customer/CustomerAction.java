@@ -12,8 +12,11 @@ import java.util.ArrayList;
     ////changes  by julie
 
     //testcase
+
+    //dsiuroieufksjdfkhv
 public class CustomerAction {
 
+    private String j;
     private String companyName;
 
     private String contactPerson;
