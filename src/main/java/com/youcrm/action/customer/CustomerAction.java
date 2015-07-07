@@ -11,8 +11,7 @@ import java.util.ArrayList;
 //hello world
     ////changes  by julie
 
-    //testcase by juliiiiii
-    //............................
+    //testcase
 public class CustomerAction {
 
     private String companyName;
