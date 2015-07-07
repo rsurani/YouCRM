@@ -8,10 +8,16 @@ import java.util.ArrayList;
  * Created by Dell 15R on 27-06-2015.
  */
 
+//radhika
+
+
+
 //hello world
     //testing 2
       //hiii..
 public class CustomerAction {
+
+    private  String r;
 
     private String companyName;
 
