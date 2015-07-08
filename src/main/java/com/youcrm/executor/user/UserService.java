@@ -17,7 +17,7 @@ public class UserService {
     private static PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
 
-    public boolean CheckUserNameandPassword(String userName, String userPassword) {
+    public boolean checkUserNameandPassword(String userName, String userPassword) {
         System.out.println("UserMaster");
         System.out.println("UserName: " + userName);
         System.out.println("Password: " + userPassword);
