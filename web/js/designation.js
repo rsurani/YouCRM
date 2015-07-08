@@ -37,26 +37,37 @@ var designation = {
 
     getDesignationList:function(callbackContext){
 
-        alert("Lo mein aa gaya")
 
-        $("#DesignationTable").find("tr:gt(0)").remove();
+        $("#DesignationTable").DataTable(
+            {
+                destroy:"true",
+                "data": callbackContext.json.result,
 
-        var designationTable = $("#DesignationTable");
+                "columns": [
+                    { "title": "Designation Id" },
+                    { "title": "Designation" },
+                    { "title": "Actions"}
+                ]
+            });
+        global.bindClickEvent({selector:'.delete'},designation.delete)
+        global.bindClickEvent({selector:'.update'},designation.updateFetch)
+        global.bindClickEvent({selector:'#updateDesignation'},designation.update)
+    },
 
-        $.each(callbackContext.json.designationList, function(key,value)
-        {
+    delete: function() {
 
-            var rowNew = $("<tr><td></td><td></td></tr>");
+        var designationId = this.id;
+        global.executePOSTRequest({
+            url: 'deleteDesignation',
+            params: {designationId: this.id}
+           // callback: designation.deleteCallback
+        })
 
+    },
 
-            rowNew.children().eq(0).text(value["userDesignation"]);
+    deleteCallback: function (deleteContextCallback) {
+       location.href="designation.jsp";
+    }
 
-            rowNew.children().eq(1).text(value["designation"]);
-
-            rowNew.appendTo(designationTable)
-
-
-        });
-}
 
 }
