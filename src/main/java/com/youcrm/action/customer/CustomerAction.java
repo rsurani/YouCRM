@@ -27,6 +27,8 @@ public class CustomerAction {
 
     private String addressLineOne;
 
+
+
     private String addressLineTwo;
 
     private String pincode;
