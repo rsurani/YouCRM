@@ -118,14 +118,14 @@ public class UserAction extends ActionSupport{
     UserService userService=new UserService();
 
 
-    public String UserLoginValidation()
+    public String userLoginValidation()
     {
         System.out.println("UserAction");
         System.out.println("UserName: " + userName);
         System.out.println("Password: " + userPassword);
 
 
-        if(userService.CheckUserNameandPassword(userName,userPassword)==true)
+        if(userService.checkUserNameandPassword(userName,userPassword)==true)
         {
             System.out.println("Success");
             message=1;
