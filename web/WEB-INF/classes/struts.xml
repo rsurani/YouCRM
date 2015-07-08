@@ -8,7 +8,7 @@
         <package name="login"  extends="json-default">
 
 
-                <action name="login" class="com.youcrm.action.user.UserAction" method="UserLoginValidation">
+                <action name="login" class="com.youcrm.action.user.UserAction" method="userLoginValidation">
                         <result name="success" type="json"></result>
                       <!--  <result name="error">welcome.jsp</result>-->
                 </action>
