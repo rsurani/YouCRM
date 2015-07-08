@@ -8,7 +8,10 @@ var global={
 
     executePOSTRequest: function (context) {
 
+        alert(context.url)
+
         $.ajax({
+
 
             url: context.url,
 
