@@ -38,10 +38,10 @@ var UserEntry= {
 
     getDetail:function(backContext)
     {
-
+alert(backContext.json.result);
         $('#UserTable').DataTable(
             {
-
+                destroy:true,
                 "data": backContext.json.result,
 
                 "columns": [
@@ -63,9 +63,12 @@ var UserEntry= {
 
     getDesignationDropDown:function(callContext)
     {
-
+        alert(callContext.json.designationList);
         $.each(callContext.json.designationList, function(key,value)
         {
+
+            alert( value["userDesignation"])
+
             $('#designation').append($('<option/>').attr("value", value["userDesignation"]).text(value["designation"]));
         });
 
@@ -104,16 +107,12 @@ var UserEntry= {
 
     delete: function(){
 
-        //  console.log($('.btn-action').data('value'));
-        // alert("Value"+(this.id).data('value'));
-
         var userId=this.id;
-       // alert(userId)
-
         global.executePOSTRequest({
             url: 'deleteUser',
             params: {userId:this.id},
             callback: UserEntry.deleteCallback
+
         })
 
     },
