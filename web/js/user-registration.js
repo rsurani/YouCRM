@@ -6,9 +6,9 @@ var UserEntry= {
 
     init: function ()
     {
-
-
-        global.bindClickEvent({selector:'#addUser'},UserEntry.add)
+        alert("Hello")
+        alert("ID: " + this.id)
+        global.bindClickEvent({container:"#userRegistration",selector:'#addUser'},UserEntry.add)
         global.bindClickEvent({selector:'#userDetail'},UserEntry.getDetail)
         // global.bindClickEvent({selector:'#delete'},global.delete)
     },
@@ -38,7 +38,7 @@ var UserEntry= {
 
     getDetail:function(backContext)
     {
-alert(backContext.json.result);
+        alert(backContext.json.result);
         $('#UserTable').DataTable(
             {
                 destroy:true,
@@ -55,20 +55,17 @@ alert(backContext.json.result);
                 ]
             });
 
-        global.bindClickEvent({selector:'.delete'},UserEntry.delete)
-        global.bindClickEvent({selector:'.update'},UserEntry.updateFetch)
-        global.bindClickEvent({selector:'#updateUser'},UserEntry.update)
+        global.bindClickEvent({container:"#UserTable" ,selector:'.delete'},UserEntry.delete)
+        global.bindClickEvent({container:"#UserTable",selector:'.update'},UserEntry.updateFetch)
+        global.bindClickEvent({container:"#UserTable",selector:'#updateUser'},UserEntry.update)
     } ,
 
 
     getDesignationDropDown:function(callContext)
     {
-        alert(callContext.json.designationList);
+
         $.each(callContext.json.designationList, function(key,value)
         {
-
-            alert( value["userDesignation"])
-
             $('#designation').append($('<option/>').attr("value", value["userDesignation"]).text(value["designation"]));
         });
 
@@ -88,6 +85,7 @@ alert(backContext.json.result);
 
     fetchUserRecord: function () {
 
+        alert("fetch")
 
         global.executePOSTRequest({
             url: 'UserList',
@@ -99,7 +97,6 @@ alert(backContext.json.result);
     },
 
     initCallback: function (callbackContext) {
-
         alert("addd")
         $('#userRegistration').find('input:not(#addUser)').val('');
         location.href="user_registration.jsp";
