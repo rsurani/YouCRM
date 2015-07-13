@@ -28,8 +28,11 @@
 
     </div>
 </div>
-<script src="js/app.js"></script>
+
+
 <script src="js/jquery-1.11.3.js"></script>
+<script src="js/app.js"></script>
+<script src="js/global.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         loginManager.init();
