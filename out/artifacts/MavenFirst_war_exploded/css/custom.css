@@ -36,3 +36,12 @@
     background-color: #DBD5D5;
     color: #fff;
 }
+.row{
+    margin-left: 0px;
+}
+
+input[type="text"], input[type="password"], select, textarea {
+
+    color: #000;
+
+}

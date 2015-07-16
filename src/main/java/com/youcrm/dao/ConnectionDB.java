@@ -17,7 +17,7 @@ public class ConnectionDB
 
             Class.forName("org.postgresql.Driver");
 
-            connection= DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "Dell 15R", "admin");
+            connection= DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "admin");
 
             System.out.print("connection now");
 

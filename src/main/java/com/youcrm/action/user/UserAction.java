@@ -19,6 +19,7 @@ public class UserAction extends ActionSupport{
     private int userContact;
     private String userEmail;
     private int message;
+    private int designationId;
 
     private Object result;
 
@@ -115,6 +116,14 @@ public class UserAction extends ActionSupport{
         this.message = message;
     }
 
+    public int getDesignationId() {
+        return designationId;
+    }
+
+    public void setDesignationId(int designationId) {
+        this.designationId = designationId;
+    }
+
     UserService userService=new UserService();
 
 
@@ -172,14 +181,22 @@ public class UserAction extends ActionSupport{
     public String designationList()
     {
         System.out.println("DesigntionList");
-        designationList=userService.getDesignationListService();
-
+       designationList=userService.getDesignationListService();
+        result = userService.getDesignationList();
+        System.out.println("hello");
         return "success";
     }
 
     public String deleteUser(){
         System.out.println("UserId"+userId);
         userService.isUserDeleted(userId);
+        return "success";
+    }
+
+    public String deleteDesignation(){
+        System.out.println("Delete Designation");
+        System.out.println(designationId);
+        userService.isDesignationDeleted(designationId);
         return "success";
     }
 

@@ -43,7 +43,7 @@ $(function()
 		$('textarea.wysihtml5').wysihtml5();
 	
 	/* DataTables */
-	if ($('.dynamicTable').size() > 0)
+/*	if ($('.dynamicTable').size() > 0)
 	{
 		$('.dynamicTable').dataTable({
 			"sPaginationType": "bootstrap",
@@ -53,7 +53,7 @@ $(function()
 			}
 		});
 	}
-	
+	*/
 	/*
 	 * Helper function for JQueryUI Sliders Create event
 	 */

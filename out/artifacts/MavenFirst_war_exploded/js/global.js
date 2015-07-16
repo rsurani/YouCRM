@@ -10,6 +10,7 @@ var global={
 
         $.ajax({
 
+
             url: context.url,
 
             type: "POST",
@@ -44,15 +45,18 @@ var global={
 
         });
 
-
     },
     bindClickEvent: function (context, callback)
     {
-
-
-        console.log(context.selector+"dd");
-        $(context.selector).on("click", callback);
-
+        if(context.container)
+        {
+            $(context.container).on("click", context.selector, callback);
+        }
+        else
+        {
+            $(context.selector).on("click", callback);
+        }
 
     }
+
 }

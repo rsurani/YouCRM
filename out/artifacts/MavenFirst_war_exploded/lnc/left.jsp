@@ -8,7 +8,6 @@
                 <ul class="collapse" id="down">
                     <li class=""><a href="viewLeads.jsp"><span>View Leads</span></a></li>
                     <li class=""><a href="customer.jsp"><span>Add Lead</span></a></li>
-
                 </ul>
             </li>
 
