@@ -43,13 +43,10 @@ var designation = {
 
     getDesignationList: function (callbackContext)
     {
-
-
         $("#DesignationTable").DataTable(
             {
-                //destroy: "true",
+                destroy: "true",
                 //processing: "true",
-                bpaging: "false",
                 "data": callbackContext.json.result,
 
                 "columns": [

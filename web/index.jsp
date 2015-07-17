@@ -11,54 +11,19 @@
     <div id="content">
 
 
-
-      <div id="dashBoradForm">
-      <%@include file="/dashboard.jsp" %>
-      </div>
-
-
-      <div id="calenderForm" style="display: none;">
-        <%@include file="/calender.html" %>
-      </div>
-
-
+    </div>
 
 
   </div>
-
-  <!-- script for modal box -->
-
   <%@include file="lnc/bottomjs.jsp" %>
-</div>
-
-<script>
-
-  $(document).ready(function(){
-
-    UserEntry.init();
-    UserEntry.fetchUserRecord();
-    UserEntry.fetchRecord();
-
-
-  })
-
-</script>
-
-
-      <%
-  String name = request.getParameter("name");
-  out.println("Name: "+name);
-  if(name!=null && name.equals("calendar")){
-    out.println(name);
-%>
-
     <script>
-      $('#dashBoradForm').css({"display":"none"});
-      $('#calenderForm').css({"display":"block"});
+    $(document).ready(function(){
+      formRender.init();
+      menuManager.init();
+      loginManager.init();
+    })
 
-    </script>
-      <%
-  }
-%>
+  </script>
+
 </body>
 </html>

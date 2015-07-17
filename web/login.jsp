@@ -1,13 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html>
-<%--included css--%>
-<%@include file="lnc/head.jsp" %>
-<body>
-
-<%--include page content here--%>
-
-<div id="wrapper">
 
     <div id="login">
         <form class="form-signin" method="post" action="javascript:void(0);" id="loginForm">
@@ -27,16 +17,11 @@
         </form>
 
     </div>
-</div>
+
+    <script type="text/javascript">
+//        $(document).ready(function() {
+         loginManager.init();
+//        });
+    </script>
 
 
-<script src="js/jquery-1.11.3.js"></script>
-<script src="js/app.js"></script>
-<script src="js/global.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        loginManager.init();
-    });
-</script>
-</body>
-</html>
