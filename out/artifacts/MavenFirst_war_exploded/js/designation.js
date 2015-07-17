@@ -4,20 +4,24 @@
 var designation = {
 
 
-    init: function () {
+    init: function ()
+    {
 
 
-
-        global.bindClickEvent({selector:'#submitDesignation'},designation.addDesignation)
+        global.bindClickEvent({selector: '#submitDesignation'}, designation.addDesignation)
 
 
     },
 
-    addDesignation:function(){
+    addDesignation: function ()
+    {
 
         global.executePOSTRequest({
+
             url: 'addDesignation',
+
             params: $("#designationForm").serialize(),
+
             callback: designation.initCallback
 
         })
@@ -28,35 +32,56 @@ var designation = {
     initCallback: function (callbackContext) {
 
         global.executePOSTRequest({
-        url: 'DesignationList',
-        callback: designation.getDesignationList
+
+            url: 'DesignationList',
+
+            callback: designation.getDesignationList
 
         })
 
     },
 
-    getDesignationList:function(callbackContext){
+    getDesignationList: function (callbackContext)
+    {
+        $("#DesignationTable").DataTable(
+            {
+                destroy: "true",
+                //processing: "true",
+                "data": callbackContext.json.result,
 
-        alert("Lo mein aa gaya")
+                "columns": [
+                    {"title": "Designation Id"},
+                    {"title": "Designation"},
+                    {"title": "Actions"}
+                ]
+            });
 
-        $("#DesignationTable").find("tr:gt(0)").remove();
+        global.bindClickEvent({container:"#DesignationTable" ,selector: '.delete'}, designation.delete)
 
-        var designationTable = $("#DesignationTable");
+        global.bindClickEvent({selector: '.update'}, designation.updateFetch)
 
-        $.each(callbackContext.json.designationList, function(key,value)
-        {
+        global.bindClickEvent({selector: '#updateDesignation'}, designation.update)
 
-            var rowNew = $("<tr><td></td><td></td></tr>");
+    },
 
+    delete: function ()
+    {
+alert("aaaaaa")
+        var designationId = this.id;
 
-            rowNew.children().eq(0).text(value["userDesignation"]);
+        global.executePOSTRequest({
 
-            rowNew.children().eq(1).text(value["designation"]);
+            url: 'deleteDesignation',
 
-            rowNew.appendTo(designationTable)
+            params: {designationId: designationId}
+            // callback: designation.deleteCallback
+        })
 
+    },
 
-        });
-}
+    deleteCallback: function (deleteContextCallback) {
+        location.href = "designation.jsp";
+    }
+
 
 }

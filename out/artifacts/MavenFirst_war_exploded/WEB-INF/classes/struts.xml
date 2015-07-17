@@ -7,11 +7,31 @@
 
         <package name="login"  extends="json-default">
 
+ <!--                    interceptors              -->
 
-                <action name="login" class="com.youcrm.action.user.UserAction" method="UserLoginValidation">
+
+    <interceptors>
+    <interceptor class="com.youcrm.interceptor.user.UserLoginInterceptor" name="loginInterceptor"> </interceptor>
+    <interceptor-stack name="loginStack">
+    <interceptor-ref name="loginInterceptor" />
+    <interceptor-ref name="defaultStack" />
+    </interceptor-stack>
+    </interceptors>
+
+
+
+
+
+                <!--                   actions                    -->
+                <action name="login" class="com.youcrm.action.user.UserAction" method="userLoginValidation">
                         <result name="success" type="json"></result>
                       <!--  <result name="error">welcome.jsp</result>-->
                 </action>
+
+                <action name="logOut" class="com.youcrm.action.user.UserAction" method="logOut">
+                        <interceptor-ref name="loginStack" />
+                </action>
+
 
                 <action name="addUsers" class="com.youcrm.action.user.UserAction" method="addUser">
 
@@ -20,7 +40,7 @@
                         <result name="success" type="json"></result>
 
                         <result name="error"  type="json"></result>
-                        <result name="input"  type="json"></result>
+
 
 
 
@@ -78,6 +98,15 @@
                         <result name="error"  type="json"></result>
 
                 </action>
+
+                <action name="deleteDesignation" class="com.youcrm.action.user.UserAction" method="deleteDesignation">
+
+                        <result name="success"  type="json"></result>
+
+                        <result name="error"  type="json"></result>
+
+                </action>
+
 
         </package>
 

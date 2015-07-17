@@ -6,9 +6,11 @@
 var global={
 
 
+
     executePOSTRequest: function (context) {
 
         $.ajax({
+
 
             url: context.url,
 
@@ -44,15 +46,23 @@ var global={
 
         });
 
-
     },
     bindClickEvent: function (context, callback)
     {
 
+        if(context.container)
+        {
+            $(context.container).on("click", context.selector, callback);
+        }
+        else
+        {
+            $(context.selector).on("click", callback);
+        }
 
-        console.log(context.selector+"dd");
-        $(context.selector).on("click", callback);
+    },
 
+    red : function(jsp,value){
 
     }
+
 }

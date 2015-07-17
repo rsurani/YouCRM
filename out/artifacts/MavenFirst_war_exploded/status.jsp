@@ -1,55 +1,62 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Dell 15R
-  Date: 29-06-2015
-  Time: 17:48
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title></title>
-</head>
+<!DOCTYPE html>
+<%@include file="lnc/head.jsp" %>
 <body>
 
-<form id="statusForm" action="javascript:void(0);">
+<!-- Start Content -->
+<div class="container-fluid">
 
-  <table>
-    <tr>
-      <td>Status</td>
-      <td><input type="text" id="status" name="status"/> </td>
-    </tr>
-    <tr>
-      <td colspan="2"><input type="submit" id="submitStatus" value="Submit"> </td>
-    </tr>
-  </table>
-</form>
+  <%@include file="lnc/header.jsp"%>
 
-<table id="StatusTable" border="1">
-  <thead>
-  <tr>
+  <div id="wrapper">
+    <%@include file="lnc/left.jsp"%>
 
-    <th>
-      Status Id
-    </th>
+    <div id="content">
+      <!-- start page content here -->
+      <form class="form-horizontal" id="statusForm" action="javascript:void(0);">
+        <div class="well">
+          <h4>Enter Status</h4>
 
-    <th>
-      Status
-    </th>
-  </tr>
-  </thead>
-  <tbody>
+          <hr class="separator-bottom">
+          <div class="row-fluid">
+            <div class="span5">
+              <div class="control-group">
+                <label class="control-label">
+                  Status
+                </label>
 
-  </tbody>
-</table>
+                <div class="controls">
+                  <input type="text" placeholder="Enter status type" class="span10" id="userStatus" name="statusType"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<script src="js/jquery-1.11.3.js"></script>
-<script src="js/status.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-   // status.init();
-    // status.getStatusList();
-  });
-</script>
+        <div class="form-actions" style="margin: 0;">
+          <button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok" id="submitStatus" ><i></i>Save</button>
+          <button type="button" class="btn btn-icon btn-default glyphicons circle_remove"><i></i>Cancel
+          </button>
+
+        </div>
+      </form>
+
+      <div class="innerLR">
+
+        <table class="dynamicTable table table-striped table-bordered table-primary table-condensed" id="statusTable">
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+  <%@include file="lnc/bottomjs.jsp"%>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      statusManager.init();
+
+      statusManager.fetchStatus();
+    });
+  </script>
 </body>
 </html>

@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<%@include file="lnc/head.jsp" %>
-<body>
 
-<!-- Start Content -->
-<div class="container-fluid">
-
-  <%@include file="lnc/header.jsp" %>
-
-  <div id="wrapper">
-    <%@include file="lnc/left.jsp" %>
-    <div id="content">
 
       <div class="separator"></div>
       <div class="heading-buttons">
@@ -59,20 +48,5 @@
           </tbody>
         </table>
       </div>
-      <br/>
-
-      <!-- End Content -->
-    </div>
-    <!-- End Wrapper -->
-  </div>
-
-  <!-- Sticky Footer -->
 
 
-</div>
-
-<%@include file="lnc/bottomjs.jsp" %>
-
-
-</body>
-</html>
