@@ -7,14 +7,23 @@
 
         <package name="login"  extends="json-default">
 
-                <action name="login" class="com.youcrm.action.user.UserAction" method="UserLoginValidation">
+
+                <action name="login" class="com.youcrm.action.user.UserAction" method="userLoginValidation">
                         <result name="success" type="json"></result>
                       <!--  <result name="error">welcome.jsp</result>-->
                 </action>
 
-                <action name="addUser" class="com.youcrm.action.user.UserAction" method="addUser">
+                <action name="addUsers" class="com.youcrm.action.user.UserAction" method="addUser">
+
+
+
                         <result name="success" type="json"></result>
-                        <!--  <result name="error">welcome.jsp</result>-->
+
+                        <result name="error"  type="json"></result>
+
+
+
+
                 </action>
 
                 <action name="UserList" class="com.youcrm.action.user.UserAction" method="userDetailList">
@@ -40,6 +49,101 @@
 
                         <result name="error"  type="json"></result>
 
+                </action>
+
+
+                <action name="deleteUser" class="com.youcrm.action.user.UserAction" method="deleteUser">
+
+                        <result name="success"  type="json"></result>
+
+                        <result name="error"  type="json"></result>
+
+                </action>
+
+
+
+                <action name="updateUser" class="com.youcrm.action.user.UserAction" method="updateFetchUser">
+
+                        <result name="success"  type="json"></result>
+
+                        <result name="error"  type="json"></result>
+
+                </action>
+
+
+                <action name="update" class="com.youcrm.action.user.UserAction" method="updateUser">
+
+                        <result name="success"  type="json"></result>
+
+                        <result name="error"  type="json"></result>
+
+                </action>
+
+                <action name="deleteDesignation" class="com.youcrm.action.user.UserAction" method="deleteDesignation">
+
+                        <result name="success"  type="json"></result>
+
+                        <result name="error"  type="json"></result>
+
+                </action>
+
+                <action name = "addStatus" class="com.youcrm.action.customer.CustomerAction" method="addStatus">
+
+                        <result name="success" type="json"></result>
+
+                </action>
+
+                <action name="fetchStatus" class="com.youcrm.action.customer.CustomerAction" method="getStatus">
+
+                        <result name="success" type="json"></result>
+                </action>
+
+                <action name="delStatus" class="com.youcrm.action.customer.CustomerAction" method="deleteStatus">
+                        <result name = "success" type="json"></result>
+                </action>
+
+                <action name="addCountry" class="com.youcrm.action.location.LocationAction" method="insertCountry">
+                        <result name="success" type="json"></result>
+                </action>
+
+                <action name="fetchCountry" class="com.youcrm.action.location.LocationAction" method="loadCountry">
+                        <result name="success" type="json"></result>
+                </action>
+
+                <action name="CountryList" class="com.youcrm.action.location.LocationAction" method ="countryList">
+                        <result name="success" type="json"></result>
+                </action>
+
+                <action name="delCountry" class="com.youcrm.action.location.LocationAction" method="deleteCountry">
+                        <result name="success" type="json"></result>
+                </action>
+
+                <action name="addState" class="com.youcrm.action.location.LocationAction" method="insertState">
+                        <result name="success" type="json"></result>
+                </action>
+
+                <action name="fetchState" class="com.youcrm.action.location.LocationAction" method="loadStateGrid">
+                        <result name="success" type="json"></result>
+                </action>
+
+                <action name="delState" class="com.youcrm.action.location.LocationAction" method="deleteState">
+                        <result name = "success" type="json"></result>
+                </action>
+
+                <action name="addCity" class="com.youcrm.action.location.LocationAction" method="insertCity">
+                        <result name="success" type="json"></result>
+                </action>
+
+                <action name="stateDropDown" class = "com.youcrm.action.location.LocationAction" method = "stateList">
+                        <result name = "success" type="json"></result>
+                </action>
+
+                <action name="fetchCity" class="com.youcrm.action.location.LocationAction" method="loadCityGrid">
+                        <result name = "success" type="json"></result>
+                </action>
+
+                <action name="delCity" class="com.youcrm.action.location.LocationAction" method="deleteCity">
+                        <result name = "success" type="json"></result>
                 </action>
         </package>
 

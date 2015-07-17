@@ -3,9 +3,7 @@ package com.youcrm.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- * Created by Mayank on 6/19/2015.
- */
+
 public class ConnectionDB
 {
 
@@ -17,7 +15,7 @@ public class ConnectionDB
 
             Class.forName("org.postgresql.Driver");
 
-            connection= DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "Dell 15R", "admin");
+            connection= DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "admin");
 
             System.out.print("connection now");
 

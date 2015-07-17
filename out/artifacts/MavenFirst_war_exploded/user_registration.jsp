@@ -32,6 +32,14 @@
           <div class="well">
             <h4>Enter User registration details</h4>
 
+            <div class="control-group" id="userIdControl" style="display: none;">
+              <label class="control-label">User ID</label>
+
+              <div class="controls">
+                <input type="text" name="userId" id="userId" class="span1" disabled/>
+              </div>
+            </div>
+
             <div class="separator"></div>
             <div class="row-fluid">
               <div class="span5">
@@ -98,9 +106,10 @@
           </div>
           <hr class="separator bottom"/>
           <div class="form-actions" style="margin: 0;">
-            <button type="submit" name="submit" id="addUser" class="btn btn-icon btn-primary glyphicons circle_ok"><i></i>Save</button>
-            <button type="button" class="btn btn-icon btn-default glyphicons circle_remove"><i></i>Cancel
+            <button type="submit" name="submit" id="addUser" class="btn btn-icon btn-primary glyphicons circle_ok" style="float: left; margin-right: 5px;"><i></i>Save</button>
+            <button type="button" class="btn btn-icon btn-default glyphicons circle_remove" id="cancel"><i></i>Cancel
             </button>
+            <button type="submit" name="submit" id="updateUser" class="btn btn-icon btn-primary glyphicons circle_ok" style="display: none; float: left; margin-right: 5px;"><i></i>Update</button>
           </div>
 
         </form>
@@ -140,8 +149,11 @@
 
 <script>
 
+
+
   $(document).ready(function(){
 
+    alert("document")
     UserEntry.init();
     UserEntry.fetchUserRecord();
     UserEntry.fetchRecord();

@@ -6,15 +6,21 @@
 var global={
 
 
+
     executePOSTRequest: function (context) {
 
-               $.ajax({
+        $.ajax({
+
 
             url: context.url,
 
             type: "POST",
 
             data: context.params,
+
+            processData: context.process,
+
+            contentType: context.content,
 
             success: function (json) {
 
@@ -40,26 +46,23 @@ var global={
 
         });
 
-
     },
-
     bindClickEvent: function (context, callback)
     {
 
-        alert(context.selector+"dd");
-        console.log(context.selector+"dd");
-        $(context.selector).on("click", callback);
-
+        if(context.container)
+        {
+            $(context.container).on("click", context.selector, callback);
+        }
+        else
+        {
+            $(context.selector).on("click", callback);
+        }
 
     },
 
-    delete: function(){
-
-        console.log("delete call");
-        alert($('.delete').attr('data-value'))
+    red : function(jsp,value){
 
     }
-
-
 
 }

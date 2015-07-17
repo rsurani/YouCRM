@@ -1,6 +1,8 @@
+<%--<script src="js/load.js"></script>--%>
 <script src="js/jquery-1.11.3.js"></script>
-<%--<script src="js/jquery-ui-1.9.2.custom.min.js"></script>--%>
-<%--<script src="js/jquery.uniform.min.js"></script>--%>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery.uniform.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
 <%--<script src="js/DataTables.js"></script>--%>
@@ -12,10 +14,20 @@
 <script src="js/jquery.toggle.buttons.js"></script>
 <script src="js/select2.js"></script>
 <script src="js/bootstrap-select.js"></script>
-<%--<script src="js/load.js"></script>--%>
-
+<script src="js/FormRender.js"></script>
+<script src="js/menuPanel.js"></script>
+<script src="js/formManager.js"></script>
 <script src="js/global.js"></script>
+<script src="js/app.js"></script>
 <script src="js/user-registration.js"></script>
+
+<script src="js/designation.js"></script>
+
+<script src = "js/status.js"></script>
+<script src = "js/country.js"></script>
+<script src = "js/state.js"></script>
+<script src = "js/city.js"></script>
+
 
 
 

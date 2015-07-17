@@ -11,6 +11,7 @@
         <filter-class>
             org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
         </filter-class>
+
     </filter>
 
     <filter-mapping>
@@ -18,9 +19,14 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <session-config>
+        <session-timeout>1</session-timeout>
+    </session-config>
+
+
 
     <welcome-file-list>
-        <welcome-file>user_registration.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>

@@ -8,14 +8,13 @@
                 <ul class="collapse" id="down">
                     <li class=""><a href="viewLeads.jsp"><span>View Leads</span></a></li>
                     <li class=""><a href="customer.jsp"><span>Add Lead</span></a></li>
-
                 </ul>
             </li>
 
-            <li class="glyphicons group"><a href="meetings.jsp"><i></i><span>Meetings</span></a></li>
-            <li class="glyphicons calendar"><a href="calendar.jsp"><i></i><span>Calendar</span></a></li>
-            <li class="glyphicons notes_2"><a href="reports.jsp"><i></i><span>Reports</span></a></li>
-            <li class="glyphicons charts"><a href="charts.jsp"><i></i><span>Charts</span></a></li>
+            <li class="glyphicons group"><a href="index.jsp"><i></i><span>Meetings</span></a></li>
+            <li class="glyphicons calendar"><a href="index.jsp?name=calendar"><i></i><span>Calendar</span></a></li>
+            <li class="glyphicons notes_2"><a href="index.jsp"><i></i><span>Reports</span></a></li>
+            <li class="glyphicons charts"><a href="index.jsp"><i></i><span>Charts</span></a></li>
         </ul>
     </div>
 </div>

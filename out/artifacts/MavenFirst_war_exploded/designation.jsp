@@ -1,56 +1,62 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Dell 15R
-  Date: 29-06-2015
-  Time: 13:20
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title></title>
-</head>
+<!DOCTYPE html>
+<%@include file="lnc/head.jsp" %>
 <body>
-<form id="designationForm" action="javascript:void(0);">
 
-  <table>
-    <tr>
-      <td>Designation</td>
-      <td><input type="text" id="userDesignation" name="designation"/> </td>
-    </tr>
-    <tr>
-      <td colspan="2"><input type="submit" id="submitDesignation" value="Submit"> </td>
-    </tr>
-  </table>
-  </form>
+<!-- Start Content -->
+<div class="container-fluid">
 
-<table id="DesignationTable" border="1">
-  <thead>
-  <tr>
+  <%@include file="lnc/header.jsp"%>
 
-    <th>
-      Designation Id
-    </th>
+  <div id="wrapper">
+    <%@include file="lnc/left.jsp"%>
 
-    <th>
-      Designation
-    </th>
-  </tr>
-  </thead>
-  <tbody>
+    <div id="content">
+      <!-- start page content here -->
+      <form class="form-horizontal" id="designationForm" action="javascript:void(0);">
+        <div class="well">
+          <h4>Enter Designation</h4>
 
-  </tbody>
-</table>
+          <hr class="separator-bottom">
+          <div class="row-fluid">
+            <div class="span5">
+              <div class="control-group">
+                <label class="control-label">
+                  Designation
+                </label>
 
-<script src="js/jquery-1.11.3.js"></script>
-<script src="js/global.js"></script>
-<script src="js/designation.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
+                <div class="controls">
+                  <input type="text" placeholder="Enter designation name" class="span10" id="userDesignation" name="designation"/>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
 
-    designation.init();
-    designation.initCallback();
-  });
-</script>
+        <div class="form-actions" style="margin: 0;">
+          <button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok" id="submitDesignation" ><i></i>Save</button>
+          <button type="button" class="btn btn-icon btn-default glyphicons circle_remove"><i></i>Cancel
+          </button>
+
+        </div>
+        </form>
+
+      <div class="innerLR">
+
+        <table class="dynamicTable table table-striped table-bordered table-primary table-condensed" id="DesignationTable">
+
+        </table>
+      </div>
+
+      </div>
+</div>
+<%@include file="lnc/bottomjs.jsp"%>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        designation.init();
+
+        designation.initCallback();
+      });
+    </script>
 </body>
 </html>
