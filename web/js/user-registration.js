@@ -6,9 +6,9 @@ var UserEntry= {
 
     init: function ()
     {
-
-
-        global.bindClickEvent({selector:'#addUser'},UserEntry.add)
+        alert("Hello")
+        alert("ID: " + this.id)
+        global.bindClickEvent({container:"#userRegistration",selector:'#addUser'},UserEntry.add)
         global.bindClickEvent({selector:'#userDetail'},UserEntry.getDetail)
         // global.bindClickEvent({selector:'#delete'},global.delete)
     },
@@ -38,10 +38,10 @@ var UserEntry= {
 
     getDetail:function(backContext)
     {
-
+        alert(backContext.json.result);
         $('#UserTable').DataTable(
             {
-
+                destroy:true,
                 "data": backContext.json.result,
 
                 "columns": [
@@ -55,9 +55,9 @@ var UserEntry= {
                 ]
             });
 
-        global.bindClickEvent({selector:'.delete'},UserEntry.delete)
-        global.bindClickEvent({selector:'.update'},UserEntry.updateFetch)
-        global.bindClickEvent({selector:'#updateUser'},UserEntry.update)
+        global.bindClickEvent({container:"#UserTable" ,selector:'.delete'},UserEntry.delete)
+        global.bindClickEvent({container:"#UserTable",selector:'.update'},UserEntry.updateFetch)
+        global.bindClickEvent({container:"#UserTable",selector:'#updateUser'},UserEntry.update)
     } ,
 
 
@@ -85,6 +85,7 @@ var UserEntry= {
 
     fetchUserRecord: function () {
 
+        alert("fetch")
 
         global.executePOSTRequest({
             url: 'UserList',
@@ -96,7 +97,6 @@ var UserEntry= {
     },
 
     initCallback: function (callbackContext) {
-
         alert("addd")
         $('#userRegistration').find('input:not(#addUser)').val('');
         location.href="user_registration.jsp";
@@ -104,16 +104,12 @@ var UserEntry= {
 
     delete: function(){
 
-        //  console.log($('.btn-action').data('value'));
-        // alert("Value"+(this.id).data('value'));
-
         var userId=this.id;
-       // alert(userId)
-
         global.executePOSTRequest({
             url: 'deleteUser',
             params: {userId:this.id},
             callback: UserEntry.deleteCallback
+
         })
 
     },

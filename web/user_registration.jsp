@@ -149,8 +149,11 @@
 
 <script>
 
+
+
   $(document).ready(function(){
 
+    alert("document")
     UserEntry.init();
     UserEntry.fetchUserRecord();
     UserEntry.fetchRecord();
