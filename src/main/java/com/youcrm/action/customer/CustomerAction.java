@@ -5,120 +5,25 @@ import com.youcrm.executor.customer.CustomerService;
 import java.util.ArrayList;
 
 /**
- * Created by Dell 15R on 27-06-2015.
+ * Created by Mausam on 7/8/2015.
  */
 
-//hello world
-    ////changes  by julie
 
-    //testcase
-
-    //dsiuroieufksjdfkhv
 public class CustomerAction {
 
-    private String j;
-    private String companyName;
+    private Object result;
 
-    private String contactPerson;
-
-    private String contactNumber;
-
-    private String emailId;
-
-    private String addressLineOne;
-
-    private String addressLineTwo;
-
-    private String pincode;
-
-    private String locationId;
+    CustomerService customerService = new CustomerService();
 
     private int statusId;
+    private String statusType;
 
-    private String status;
-
-    private ArrayList<CustomerAction> list=new ArrayList<CustomerAction>();
-
-CustomerService customerService=new CustomerService();
-
-    public ArrayList<CustomerAction> getList() {
-        return list;
+    public Object getResult() {
+        return result;
     }
 
-    public void setList(ArrayList<CustomerAction> list) {
-        this.list = list;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public String getContactPerson() {
-        return contactPerson;
-    }
-
-    public void setContactPerson(String contactPerson) {
-        this.contactPerson = contactPerson;
-    }
-
-    public String getContactNumber() {
-        return contactNumber;
-    }
-
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
-    }
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
-
-    public String getAddressLineOne() {
-        return addressLineOne;
-    }
-
-    public void setAddressLineOne(String addressLineOne) {
-        this.addressLineOne = addressLineOne;
-    }
-
-    public String getAddressLineTwo() {
-        return addressLineTwo;
-    }
-
-    public void setAddressLineTwo(String addressLineTwo) {
-        this.addressLineTwo = addressLineTwo;
-    }
-
-    public String getPincode() {
-        return pincode;
-    }
-
-    public void setPincode(String pincode) {
-        this.pincode = pincode;
-    }
-
-    public String getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(String locationId) {
-        this.locationId = locationId;
+    public void setResult(Object result) {
+        this.result = result;
     }
 
     public int getStatusId() {
@@ -129,18 +34,36 @@ CustomerService customerService=new CustomerService();
         this.statusId = statusId;
     }
 
-    public String addStatus() {
+    public String getStatusType() {
+        return statusType;
+    }
 
-        customerService.isStatusAdded(status);
+    public void setStatusType(String statusType) {
+        this.statusType = statusType;
+    }
 
+    public String addStatus()
+    {
+        if(customerService.isStatusInserted(statusType))
+        {
+            return "success";
+        }
+        return "error";
+    }
+
+    public String getStatus()
+    {
+
+        result = customerService.getStatusListService();
         return "success";
     }
 
-    public String statusList(){
-
-
-
-        return "success";
+    public String deleteStatus()
+    {
+        if(customerService.isStatusDeleted(statusId))
+        {
+            return "success";
+        }
+        return "error";
     }
-
 }

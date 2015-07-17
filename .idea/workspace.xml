@@ -2,8 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae9c316e-1912-4727-8914-6be9620ef749" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/strutsexample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/dao/ConnectionDB.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/youcrm/action/customer/CustomerAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/customer/CustomerService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/youcrm/executor/customer/CustomerService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/location/LocationAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/youcrm/action/location/LocationAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/location/LocationService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/youcrm/executor/location/LocationService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/user/UserAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/youcrm/action/user/UserAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/user/UserService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/youcrm/action/location/LocationAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/youcrm/executor/location/LocationService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/lnc/bottomjs.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/city.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/city.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/city.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/country.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/country.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/css/custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/designation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/designation.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/designation_1.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/formManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/global.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/lnc/left.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/load.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/state.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/status.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/status.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/struts.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/user-registration.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/user_registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/youcrm/dao/ConnectionDB.java" afterPath="$PROJECT_DIR$/src/main/java/com/youcrm/dao/ConnectionDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/youcrm/action/customer/CustomerAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/youcrm/action/customer/CustomerAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/youcrm/executor/customer/CustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/youcrm/executor/customer/CustomerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MavenFirst.iml" afterPath="$PROJECT_DIR$/MavenFirst.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/lnc/bottomjs.jsp" afterPath="$PROJECT_DIR$/web/lnc/bottomjs.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/country.js" afterPath="$PROJECT_DIR$/web/js/country.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/custom.css" afterPath="$PROJECT_DIR$/web/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/load.js" afterPath="$PROJECT_DIR$/web/js/load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/state.js" afterPath="$PROJECT_DIR$/web/js/state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/state.jsp" afterPath="$PROJECT_DIR$/web/state.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/status.js" afterPath="$PROJECT_DIR$/web/js/status.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" />
     </list>
     <ignored path="strutsexample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +77,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31894934" vertical-offset="85" max-vertical-offset="918">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.15" vertical-offset="0" max-vertical-offset="969">
+              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -43,6 +88,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -366,7 +418,7 @@
       <option name="number" value="Default" />
       <updated>1437123672080</updated>
       <workItem from="1437123673520" duration="32000" />
-      <workItem from="1437124164624" duration="128000" />
+      <workItem from="1437124164624" duration="365000" />
     </task>
     <task id="LOCAL-00001" summary="removed target, out">
       <created>1437124266400</created>
@@ -374,27 +426,33 @@
       <option name="project" value="LOCAL" />
       <updated>1437124266400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="removed target, out">
+      <created>1437124294331</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1437124294331</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160000" />
+    <option name="totallyTimeSpent" value="397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -429,7 +487,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="removed target, out" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed target, out" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/jvasani/YouCRM&#10;&#10;Conflicts:&#10;&#9;.gitignore&#10;&#9;.idea/misc.xml&#10;&#9;.idea/workspace.xml&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/customer/CustomerAction.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/user/UserAction.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/dao/ConnectionDB.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/customer/CustomerService.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/user/UserService.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/struts.xml&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/web.xml&#10;&#9;out/artifacts/MavenFirst_war_exploded/css/custom.css&#10;&#9;out/artifacts/MavenFirst_war_exploded/designation.jsp&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/designation.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/formManager.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/global.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/load.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/status.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/user-registration.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/lnc/bottomjs.jsp&#10;&#9;out/artifacts/MavenFirst_war_exploded/lnc/left.jsp&#10;&#9;out/artifacts/MavenFirst_war_exploded/status.jsp&#10;&#9;out/artifacts/MavenFirst_war_exploded/user_registration.jsp&#10;&#9;target/MANIFEST.MF&#10;&#9;target/classes/com/youcrm/action/customer/CustomerAction.class&#10;&#9;target/classes/com/youcrm/action/user/UserAction.class&#10;&#9;target/classes/com/youcrm/dao/ConnectionDB.class&#10;&#9;target/classes/com/youcrm/executor/customer/CustomerService.class&#10;&#9;target/classes/com/youcrm/executor/user/UserService.class&#10;&#9;web/WEB-INF/classes/struts.xml&#10;&#9;web/WEB-INF/web.xml&#10;&#9;web/js/country.js&#10;&#9;web/js/state.js&#10;&#9;web/lnc/left.jsp&#10;&#9;web/state.jsp&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/jvasani/YouCRM&#10;&#10;Conflicts:&#10;&#9;.gitignore&#10;&#9;.idea/misc.xml&#10;&#9;.idea/workspace.xml&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/customer/CustomerAction.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/user/UserAction.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/dao/ConnectionDB.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/customer/CustomerService.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/user/UserService.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/struts.xml&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/web.xml&#10;&#9;out/artifacts/MavenFirst_war_exploded/css/custom.css&#10;&#9;out/artifacts/MavenFirst_war_exploded/designation.jsp&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/designation.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/formManager.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/global.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/load.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/status.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/js/user-registration.js&#10;&#9;out/artifacts/MavenFirst_war_exploded/lnc/bottomjs.jsp&#10;&#9;out/artifacts/MavenFirst_war_exploded/lnc/left.jsp&#10;&#9;out/artifacts/MavenFirst_war_exploded/status.jsp&#10;&#9;out/artifacts/MavenFirst_war_exploded/user_registration.jsp&#10;&#9;target/MANIFEST.MF&#10;&#9;target/classes/com/youcrm/action/customer/CustomerAction.class&#10;&#9;target/classes/com/youcrm/action/user/UserAction.class&#10;&#9;target/classes/com/youcrm/dao/ConnectionDB.class&#10;&#9;target/classes/com/youcrm/executor/customer/CustomerService.class&#10;&#9;target/classes/com/youcrm/executor/user/UserService.class&#10;&#9;web/WEB-INF/classes/struts.xml&#10;&#9;web/WEB-INF/web.xml&#10;&#9;web/js/country.js&#10;&#9;web/js/state.js&#10;&#9;web/lnc/left.jsp&#10;&#9;web/state.jsp&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -446,8 +505,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31894934" vertical-offset="85" max-vertical-offset="918">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.15" vertical-offset="0" max-vertical-offset="969">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding />
         </state>
       </provider>
