@@ -14,7 +14,7 @@
         </li>
         <li class="account">
             <a data-toggle="dropdown" href=" " class="glyphicons logout user"><span
-                    class="hidden-phone text">Admin</span><i></i></a>
+                    class="hidden-phone text" id="loginName"></span><i></i></a>
             <ul class="dropdown-menu pull-right">
                 <li><a href="manageRoles.jsp" class="glyphicons cogwheel">Assign Roles<i></i></a></li>
 
@@ -23,7 +23,7 @@
 								<span class="heading">Profile <a href="profile.jsp" class="pull-right">edit</a></span>
 								<span class="img"></span>
 								<span class="details">
-									admin
+									<%session.getAttribute("loginId");%>
 								</span>
 								<span class="clearfix"></span>
 							</span>

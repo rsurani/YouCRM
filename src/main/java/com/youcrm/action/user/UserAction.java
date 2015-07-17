@@ -1,14 +1,19 @@
 package com.youcrm.action.user;
 
+
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.youcrm.executor.user.UserService;
+import org.apache.struts2.dispatcher.SessionMap;
+import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * Created by Mayank on 6/22/2015.
  */
-public class UserAction extends ActionSupport{
+public class UserAction extends ActionSupport implements SessionAware{
 
     private int userId;
     private int userRole;
@@ -20,6 +25,9 @@ public class UserAction extends ActionSupport{
     private String userEmail;
     private int message;
     private int designationId;
+    private String displayID;
+
+    private SessionMap<String,Object> sessionMap;
 
     private Object result;
 
@@ -27,6 +35,21 @@ public class UserAction extends ActionSupport{
 
     private ArrayList<UserAction> designationList=new ArrayList<UserAction>();
 
+    public String getDisplayID() {
+        return displayID;
+    }
+
+    public void setDisplayID(String userName) {
+        this.displayID = displayID;
+    }
+
+    public SessionMap<String, Object> getSessionMap() {
+        return sessionMap;
+    }
+
+    public void setSessionMap(SessionMap<String, Object> sessionMap) {
+        this.sessionMap = sessionMap;
+    }
 
     public ArrayList<UserAction> getUserList() {
         return userList;
@@ -139,6 +162,12 @@ public class UserAction extends ActionSupport{
             System.out.println("Success");
             message=1;
             System.out.println("Message: " +message);
+
+            UserAction userAction = new UserAction();
+            userAction.setDisplayID(userName);
+//            sessionMap.put("login", true);
+//            sessionMap.put("loginId",userName);
+            System.out.println("session");
             return "success";
         }
         else {
@@ -148,6 +177,14 @@ public class UserAction extends ActionSupport{
             return "success";
         }
     }
+
+    public String logOut() {
+        System.out.print("Destroying Session");
+        sessionMap.remove("loginId");
+        addActionMessage("You have been Successfully Logged Out");
+        return "success";
+    }
+
 
     public String addUser(){
 
@@ -234,5 +271,11 @@ public class UserAction extends ActionSupport{
 
     public void setResult(Object result) {
         this.result = result;
+    }
+
+    @Override
+    public void setSession(Map<String, Object> session) {
+
+        sessionMap = (SessionMap)session;
     }
 }

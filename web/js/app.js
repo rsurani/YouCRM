@@ -1,79 +1,65 @@
+
+
 var loginManager = {
-
-    executePOSTRequest: function (context) {
-
-        $.ajax({
-
-            url: context.url,
-
-            type: "POST",
-
-            data: context.params,
-
-            success: function (json) {
-
-                var callbacks;
-
-                if (context.callback != undefined) {
-
-                    callbacks = $.Callbacks();
-
-                    callbacks.add(context.callback);
-
-                    context.json = json;
-
-                    callbacks.fire(context);
-
-                    callbacks.remove(context.callback);
-
-                }
-
-            },
-
-            dataType: "json"
-
-        });
-
-
-    },
-
-    bindClickEvent: function (context, callback)
-    {
-
-        $(context.selector).on("click", callback);
-
-    },
 
     init: function () {
 
+        //alert("yed");
+        global.bindClickEvent({selector:'#loginAction'},loginManager.login)
+        global.bindClickEvent({selector:'#logout'},loginManager.logout)
 
-        loginManager.bindClickEvent({selector:'#loginAction'},loginManager.login)
 
 
     },
 
     login:function(){
 
-        loginManager.executePOSTRequest({
+        global.executePOSTRequest({
             url: 'login',
             params: $("#loginForm").serialize(),
             callback: loginManager.initCallback
+        })
+    },
 
+    logout:function(){
+
+        global.executePOSTRequest({
+            url: 'logOut',
+            params: $("#logoutForm").serialize(),
+            callback: loginManager.logoutCallback
         })
 
     },
     initCallback: function (callbackContext) {
 
+       // alert("UserName: "+callbackContext.json.userName)
+        //
+        //$('#loginName').text(callbackContext.json.userName)
+
+        if (callbackContext.json.message == '1') {
+
+            $("#loginName").text(callbackContext.json.userName);
+
+            $("#content").load('/dashboard.jsp');
+        }
+
+        if (callbackContext.json.message == '0') {
+        }
+
+    },
+
+    logoutCallback: function (callbackContext) {
+
         if (callbackContext.json.message == 1) {
 
-            location.href = "dashboard.jsp";
+            location.href = "index.jsp";
         }
         else {
 
             alert("wrong")
         }
-
     }
+
 }
 
 
