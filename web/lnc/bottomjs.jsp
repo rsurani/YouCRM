@@ -17,6 +17,7 @@
 <script src="js/formManager.js"></script>
 <script src="js/global.js"></script>
 <script src="js/user-registration.js"></script>
+
 <script src="js/designation.js"></script>
 
 <script src = "js/status.js"></script>

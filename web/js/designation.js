@@ -49,7 +49,7 @@ var designation = {
             {
                 //destroy: "true",
                 //processing: "true",
-                //bpaging: "false",
+                bpaging: "false",
                 "data": callbackContext.json.result,
 
                 "columns": [

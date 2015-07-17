@@ -1,33 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d509d38-0519-451b-a530-10d23c4105ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/location/LocationAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/location/LocationService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/city.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/city.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/country.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/country.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/designation_1.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/js/state.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/state.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/strutsexample.iml" />
-      <change type="DELETED" beforePath="D:\mausam\MavenFirst-location\YouCRM\.idea\artifacts\MavenFirst_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\mausam\MavenFirst-location\YouCRM\.idea\dataSources.ids" afterPath="" />
-      <change type="DELETED" beforePath="D:\mausam\MavenFirst-location\YouCRM\.idea\dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\mausam\MavenFirst-location\YouCRM\.idea\dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\mausam\MavenFirst-location\YouCRM\.idea\libraries\antlr_2_7_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\mausam\MavenFirst-location\YouCRM\.idea\libraries\postgresql_9_4_1201_jdbc4.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\mausam\MavenFirst-location\YouCRM\.idea\uiDesigner.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/youcrm/dao/ConnectionDB.java" afterPath="$PROJECT_DIR$/src/main/java/com/youcrm/dao/ConnectionDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MavenFirst.iml" afterPath="$PROJECT_DIR$/MavenFirst.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="9d509d38-0519-451b-a530-10d23c4105ba" name="Default" comment="Merge branch 'master' of https://github.com/jvasani/YouCRM&#10;&#10;Conflicts:&#10;&#9;src/main/java/com/youcrm/action/customer/CustomerAction.java&#10;&#9;src/main/java/com/youcrm/executor/user/UserService.java&#10;&#9;web/js/designation.js&#10;&#9;web/js/global.js&#10;&#9;web/lnc/bottomjs.jsp&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/youcrm/action/customer/CustomerAction.class" afterPath="$PROJECT_DIR$/target/classes/com/youcrm/action/customer/CustomerAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/user/UserAction.class" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/user/UserAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/youcrm/action/user/UserAction.class" afterPath="$PROJECT_DIR$/target/classes/com/youcrm/action/user/UserAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/user/UserService.class" afterPath="$PROJECT_DIR$/out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/user/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/youcrm/executor/user/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/youcrm/executor/user/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/youcrm/executor/user/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/youcrm/executor/user/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/lnc/bottomjs.jsp" afterPath="$PROJECT_DIR$/web/lnc/bottomjs.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/designation.js" afterPath="$PROJECT_DIR$/web/js/designation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/global.js" afterPath="$PROJECT_DIR$/web/js/global.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="8b09cff4-1503-4344-aae1-39204868ed6a" name="Failed commit: Default" comment="Merge branch 'master' of https://github.com/jvasani/YouCRM&#10;&#10;Conflicts:&#10;&#9;&#10;&#9;src/main/java/com/youcrm/action/customer/CustomerAction.java&#10;&#9;src/main/java/com/youcrm/executor/user/UserService.java&#10;&#9;target/classes/com/youcrm/action/customer/CustomerAction.class&#10;&#9;target/classes/com/youcrm/action/user/UserAction.class&#10;&#9;target/classes/com/youcrm/executor/user/UserService.class&#10;&#9;web/js/designation.js&#10;&#9;web/js/global.js&#10;&#9;web/lnc/bottomjs.jsp&#10;" />
     <ignored path="strutsexample.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,8 +42,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15178572" vertical-offset="0" max-vertical-offset="935">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.66480446" vertical-offset="0" max-vertical-offset="952">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -393,7 +380,7 @@
       <created>1437121503120</created>
       <option name="number" value="Default" />
       <updated>1437121503120</updated>
-      <workItem from="1437121504705" duration="511000" />
+      <workItem from="1437121504705" duration="1022000" />
     </task>
     <task id="LOCAL-00001" summary="Location master commit">
       <created>1437121843216</created>
@@ -407,30 +394,36 @@
       <option name="project" value="LOCAL" />
       <updated>1437121973414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Location master commit">
+      <created>1437122052452</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1437122052452</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511000" />
+    <option name="totallyTimeSpent" value="1022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.685155" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952693" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -458,12 +451,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Location master commit" />
     <MESSAGE value="git ignore changes, added target" />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore changes, added target" />
+    <MESSAGE value="Location master commit" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/jvasani/YouCRM&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/customer/CustomerAction.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/action/user/UserAction.class&#10;&#9;out/artifacts/MavenFirst_war_exploded/WEB-INF/classes/com/youcrm/executor/user/UserService.class&#10;&#9;src/main/java/com/youcrm/action/customer/CustomerAction.java&#10;&#9;src/main/java/com/youcrm/executor/user/UserService.java&#10;&#9;target/classes/com/youcrm/action/customer/CustomerAction.class&#10;&#9;target/classes/com/youcrm/action/user/UserAction.class&#10;&#9;target/classes/com/youcrm/executor/user/UserService.class&#10;&#9;web/js/designation.js&#10;&#9;web/js/global.js&#10;&#9;web/lnc/bottomjs.jsp&#10;" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/jvasani/YouCRM&#10;&#10;Conflicts:&#10;&#9;&#10;&#9;src/main/java/com/youcrm/action/customer/CustomerAction.java&#10;&#9;src/main/java/com/youcrm/executor/user/UserService.java&#10;&#9;target/classes/com/youcrm/action/customer/CustomerAction.class&#10;&#9;target/classes/com/youcrm/action/user/UserAction.class&#10;&#9;target/classes/com/youcrm/executor/user/UserService.class&#10;&#9;web/js/designation.js&#10;&#9;web/js/global.js&#10;&#9;web/lnc/bottomjs.jsp&#10;" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/jvasani/YouCRM&#10;&#10;Conflicts:&#10;&#9;src/main/java/com/youcrm/action/customer/CustomerAction.java&#10;&#9;src/main/java/com/youcrm/executor/user/UserService.java&#10;&#9;web/js/designation.js&#10;&#9;web/js/global.js&#10;&#9;web/lnc/bottomjs.jsp&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/jvasani/YouCRM&#10;&#10;Conflicts:&#10;&#9;src/main/java/com/youcrm/action/customer/CustomerAction.java&#10;&#9;src/main/java/com/youcrm/executor/user/UserService.java&#10;&#9;web/js/designation.js&#10;&#9;web/js/global.js&#10;&#9;web/lnc/bottomjs.jsp&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -472,8 +469,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15178572" vertical-offset="0" max-vertical-offset="935">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.66480446" vertical-offset="0" max-vertical-offset="952">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
       </provider>

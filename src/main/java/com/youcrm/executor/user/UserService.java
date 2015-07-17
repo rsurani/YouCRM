@@ -182,6 +182,7 @@ public class UserService {
 
         try {
 
+
             preparedStatement = con.connection.prepareStatement("SELECT designation_id,designation_name FROM youcrm.designation");
 
             resultSet = preparedStatement.executeQuery();
@@ -196,7 +197,7 @@ public class UserService {
 
                 designationList.add(userAction);
 
-                System.out.println("Designation: "+ designationList);
+
             }
 
         } catch (Exception e) {

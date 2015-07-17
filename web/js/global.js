@@ -8,6 +8,8 @@ var global={
 
     executePOSTRequest: function (context) {
 
+
+
         $.ajax({
 
 
@@ -48,15 +50,18 @@ var global={
     },
     bindClickEvent: function (context, callback)
     {
-        if(context.container)
+        alert("Container"+context.container);
+        alert("Selector"+context.selector);
+        //context.selector ("by kapil sir")
+        if(context.selector)
         {
             $(context.container).on("click", context.selector, callback);
         }
         else
         {
-            $(context.selector).on("click", callback);
+            alert("Its sad that i dont have any selector");
+            $(context.container).on("click", callback);
         }
 
     }
-
 }
