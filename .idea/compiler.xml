@@ -22,11 +22,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="MavenFirst" />
+        <module name="strutsexample" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="MavenFirst" target="1.6" />
-    </bytecodeTargetLevel>
   </component>
 </project>

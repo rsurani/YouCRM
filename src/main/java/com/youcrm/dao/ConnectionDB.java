@@ -3,9 +3,7 @@ package com.youcrm.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- * Created by Mayank on 6/19/2015.
- */
+
 public class ConnectionDB
 {
 
