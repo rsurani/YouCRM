@@ -1,7 +1,7 @@
 #idea setting
-/.idea/*
-/target/*
-/out/*
+.idea/*
+target/*
+out/*
 
 
 # Windows image file caches
