@@ -21,6 +21,10 @@
     <script type="text/javascript">
 //        $(document).ready(function() {
          loginManager.init();
+
+
+
+            //test
 //        });
     </script>
 
